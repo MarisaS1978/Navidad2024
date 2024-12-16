@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Bilbo+Swash+Caps&family=Comforter&family=Festive&family=Lovers+Quarrel&family=Updock&family=Vibes&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(#732383, #571464, #420b4d);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.star {
+  width: 3rem;
+  height: 3rem;
+  background: #f1ce07;
+  background: #732383;
+  transform: translate(0.2rem, 6.5rem);
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  animation: animar 0.8s linear infinite;
+}
+.branch2 {
+  width: 2.4rem;
+  height: 3.2rem;
+  background: #079beb;
+  background: #732383;
+  transform: translate(0.14rem, 6.4rem);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 85%);
+  animation: animar 0.8s linear infinite;
+}
+.branch3 {
+  width: 3.5rem;
+  height: 3rem;
+  background: #ee1992;
+  background: #732383;
+  transform: translate(0.3rem, 5.2rem);
+  clip-path: polygon(15% 24%, 75% 0, 100% 100%, 0 80%);
+  animation: animar 0.8s linear infinite;
+}
+.branch4 {
+  width: 4.5rem;
+  height: 2rem;
+  background: #02ee35;
+  background: #732383;
+  transform: translate(0.19rem, 4rem);
+  clip-path: polygon(12% 0, 90% 31%, 100% 100%, 0% 100%);
+  animation: animar 0.8s linear infinite;
+}
+.branch5 {
+  width: 5.2rem;
+  height: 2rem;
+  background: #f1ce07;
+  background: #732383;
+  transform: translate(0.27rem, 3.3rem);
+  clip-path: polygon(6% 0, 90% 0, 100% 100%, 0 50%);
+  animation: animar 0.8s linear infinite;
+}
+.branch6 {
+  width: 6.4rem;
+  height: 2.6rem;
+  background: #079beb;
+  background: #732383;
+  transform: translateY(1.8rem);
+  clip-path: polygon(13% 0, 95% 40%, 100% 72%, 0% 95%);
+  animation: animar 0.8s linear infinite;
+}
+.branch7 {
+  width: 9rem;
+  height: 3.5rem;
+  background: #ee1992;
+  background: #732383;
+  transform: translateY(0.8rem);
+  clip-path: polygon(13% 19%, 87% 0, 100% 90%, 0% 100%);
+  animation: animar 0.8s linear infinite;
+}
+.branch8 {
+  width: 11.2rem;
+  height: 3.5rem;
+  background: #02ee35;
+  background: #732383;
+  transform: translate(0.2rem, -1rem);
+  clip-path: polygon(12% 10%, 88% 25%, 100% 95%, 0 90%);
+  animation: animar 0.8s linear infinite;
+}
+
+/* ===== Animación Ramas  */
+@keyframes animar {
+  from {
+    background: var(--color);
+  }
+}
+/* =====  Texto  */
+.text {
+  font-family: "Vibes", cursive;
+  font-size: 2.5rem;
+  transform: translateY(-1rem);
+  animation: background 5s linear infinite;
+  background: linear-gradient(
+    90deg,
+    #f1ce07 0%,
+    #079beb 20%,
+    #ee1992 40%,
+    #02ee35 60%,
+    #f1ce07 80%,
+    #079beb 100%
+  );
+  background-size: 500% 100%;
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text ;
+}
+.foot-text{
+    font-family: "Vibes", cursive;
+    font-weight: bold;
+    color: #7e388b;
+    align-items: end;
+    padding-left: 75%;
+}
+/* ===== Animación texto  */
+@keyframes background {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+/* ============== Nieve  */
+i {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  box-shadow: 0 0 7px rgb(253, 253, 253, 0.2);
+  top: -10px;
+  animation: snowing 20s linear infinite;
+}
+@keyframes snowing {
+  0% {
+    top: -10px;
+  }
+  100% {
+    top: calc(100vh + 10px);
+  }
+}
